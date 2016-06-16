@@ -1,0 +1,158 @@
+.tag1
+{
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:1em;
+	margin-bottom:1em;
+	font-family:Arial;
+	font-size:14px;
+}
+.tagTL
+{
+	margin-left:1.5em;
+	margin-right:.5em;
+	margin-top:0em;
+	margin-bottom:0em;
+	font-family:Arial;
+	font-size:12px;
+}
+
+.tagTR
+{
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:0em;
+	margin-bottom:0em;
+	font-family:Arial;
+	font-size:12px;
+}
+
+.tagBlue
+{
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:1em;
+	margin-bottom:1em;
+	font-family:Arial;
+	font-size:14px;
+	color:blue;
+}
+
+div.install
+{
+	width:500px;
+	height:170px;
+	overflow:hidden;
+}
+
+div.installExpanded
+{
+	width:500px;
+	height:400px;
+	overflow:hidden;
+}
+div.InstallHelp
+{
+	visibility:hidden;
+}
+td.InstallHelp
+{
+	height:70px
+}
+p.InstallHelp
+{
+	font-family:Arial;
+	font-size:14px;
+	text-align:justify;
+}
+div.InstallButton
+{
+	border:0;
+	height:74px;
+	width:267px;
+	background-image:url(installImage/blue.png);
+	display:block;
+}
+span.InstallButton
+{
+	border:0;
+	height:74px;
+	width:267px;
+	background-image:url(installImage/blue.png);
+	display:block;
+	cursor: hand;
+}
+div.ff_dialog
+{
+	background-image:url(installImage/ff_dialog.jpg);
+	background-repeat:no-repeat;
+	border:0;
+	height:56px;
+	width:250px;
+}
+div.desktop
+{
+	background-image:url(installImage/desktop.jpg);
+	background-repeat:no-repeat;
+	border:0;
+	height:56px;
+	width:256px;
+}
+div.chrome_dialog
+{
+	background-image:url(installImage/chrome_dialog.jpg);
+	background-repeat:no-repeat;
+	border:0;
+	height:56px;
+	width:256px;
+}
+
+div.chrome_run
+{
+	background-image:url(installImage/chrome_run.jpg);
+	background-repeat:no-repeat;
+	border:0;
+	height:56px;
+	width:256px;
+}
+
+div.safari_dialog
+{
+	background-image:url(installImage/safari_dialog.jpg);
+	background-repeat:no-repeat;
+	border:0;
+	height:56px;
+	width:256px;
+}
+div.opera_dialog
+{
+	background-image:url(installImage/opera_dialog.jpg);
+	background-repeat:no-repeat;
+	border:0;
+	height:56px;
+	width:256px;
+}
+div.ie_dialog
+{
+	background-image:url(installImage/ie_dialog.jpg);
+	background-repeat:no-repeat;
+	border:0;
+	height:56px;
+	width:256px;
+}
+div.ie_run
+{
+	background-image:url(installImage/ie_run.jpg);
+	background-repeat:no-repeat;
+	border:0;
+	height:56px;
+	width:256px;
+}
+div.installerImage
+{
+	background-image:url(installImage/installer.jpg);
+	background-repeat:no-repeat;
+	background-position: -220px 97%;
+	height: 56px;
+	width: 256px;
+}
