@@ -1,9 +1,181 @@
-<mvc:View controllerName="bsContact.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
-	<App>
+<mvc:View 
+	controllerName="bsContact.controller.View1" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:l="sap.ui.layout"
+	xmlns:semantic="sap.m.semantic"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+<!--<SplitApp id="idBSAppControl"></SplitApp>-->
+	<App id="app">
 		<pages>
-			<Page title="{i18n>title}">
-				<content></content>
+			<Page title="Demo">
+				<content>
+					<SplitContainer id="idBSAppControl">
+						<masterPages>
+								<Page id="master" showHeader="false">
+									<content>
+										<List
+											id="bsList"
+											items="{bsModel>/items}">
+											<items>
+												<!--<ColumnListItem-->
+												<!--	press="goToItemDetail" -->
+												<!--	type="Navigation"-->
+												<!--	cells="{bsModel>/items}"-->
+												<!--><cells>-->
+												<ObjectListItem
+													title="{bsModel>title}"
+													press="goToItemDetail" 
+													type="Navigation"
+												/>
+												<!--</cells>-->
+												<!--</ColumnListItem>-->
+
+											</items>
+										</List>
+									</content>
+								</Page>
+						</masterPages>						
+						<detailPages>
+							<Page id="detail" showHeader="false">
+								<content>
+									<!--<mvc:XMLView viewName="bsContact.view.ItemDetails"></mvc:XMLView>-->
+									<!--<mvc:View -->
+								</content>
+							</Page>
+						</detailPages>
+					</SplitContainer>
+				</content>
 			</Page>
 		</pages>
 	</App>
+	<!--<App>-->
+	<!--	<pages>-->
+	<!--		<Page title="{i18n>title}">-->
+	<!--			<content>-->
+	<!--				<Page-->
+	<!--					id="sideContentContainer"-->
+	<!--					showHeader="false"-->
+	<!--					showNavButton="false">-->
+	<!--					<SplitContainer>-->
+	<!--						<masterPages>-->
+	<!--							<semantic:MasterPage title="Master Page Title">-->
+	<!--								<semantic:sort>-->
+	<!--									<semantic:SortSelect change="onSemanticSelectChange"-->
+	<!--															 items="{-->
+	<!--											path: '/ProductCollectionStats/Filters',-->
+	<!--											sorter: { path: 'Name' }-->
+	<!--											}">-->
+	<!--										<core:Item key="{type}" text="{type}" />-->
+	<!--									</semantic:SortSelect>-->
+	<!--								</semantic:sort>-->
+	<!--								<semantic:filter>-->
+	<!--									<semantic:FilterAction press="onSemanticButtonPress"/>-->
+	<!--								</semantic:filter>-->
+	<!--								<semantic:group>-->
+	<!--									<semantic:GroupAction  press="onSemanticButtonPress"/>-->
+	<!--								</semantic:group>-->
+	<!--								<semantic:addAction>-->
+	<!--									<semantic:AddAction press="onSemanticButtonPress"/>-->
+	<!--								</semantic:addAction>-->
+	<!--								<semantic:multiSelectAction>-->
+	<!--									<semantic:MultiSelectAction press="onMultiSelectPress"/>-->
+	<!--								</semantic:multiSelectAction>-->
+	<!--								<semantic:content>-->
+	<!--									<List>-->
+	<!--										<ObjectListItem-->
+	<!--											title="MoutainView"-->
+	<!--											press="onSelect"-->
+	<!--										></ObjectListItem>-->
+	<!--										<ObjectListItem-->
+	<!--											title="Experiment5"-->
+	<!--											press="onSelect"-->
+	<!--										>												-->
+	<!--										</ObjectListItem>-->
+	<!--									</List>-->
+	<!--								</semantic:content>-->
+	<!--							</semantic:MasterPage>-->
+	<!--						</masterPages>-->
+	<!--						<detailPages>-->
+	<!--							<semantic:DetailPage-->
+	<!--									title="Detail Page Title">-->
+	<!--								<semantic:content>-->
+										<!--<html:object id="CC3D" classid="CLSID:4B6E3013-6E45-11D0-9309-0020AFE05CC8" codebase="blaxxunCC3D.ocx" height="600px" width="800px">-->
+										<!--<html:param name="_Version" value="65536"></html:param>-->
+										<!--<html:param name="_StockProps" value="0"></html:param>-->
+										<!--<html:param name="SRC" value="./src/Experiment5.wrl"></html:param>-->
+										<!--<html:embed src="./src/Experiment5.wrl" name="CC3D" border="0" height="600px" width="800px"></html:embed>	-->
+										<!--</html:object>-->
+										<!--<Button text="Next VP" press="handleNextVPButton"></Button>-->
+										<!--<Button text="Prev VP" press="handlePrevVPButton"></Button>-->
+										<!--<Button text="Animate" press="handleAnimateVP"></Button>-->
+										<!--<Button text="Stop Animate" press="stopAnimateVP"></Button>-->
+	<!--								</semantic:content>-->
+	<!--							</semantic:DetailPage>-->
+					
+	<!--						</detailPages>-->
+					
+	<!--					</SplitContainer>-->
+	<!--					</Page>-->
+	<!--			</content>-->
+	<!--		</Page>-->
+	<!--	</pages>-->
+	<!--</App>-->
+	<!--<App>-->
+	<!--	<pages>-->
+	<!--		<Page title="{i18n>title}">-->
+	<!--			<content>-->
+	<!--				<Page-->
+	<!--					id="sideContentContainer"-->
+	<!--					showHeader="false"-->
+	<!--					showNavButton="false">-->
+	<!--					<l:DynamicSideContent-->
+	<!--						id="DynamicSideContent"-->
+	<!--						class="sapUiDSCExplored sapUiContentPadding"-->
+	<!--						sideContentFallDown="BelowM"-->
+	<!--						containerQuery="true"-->
+	<!--						breakpointChanged="updateToggleButtonState">-->
+	<!--						<l:mainContent>-->
+	<!--							<List-->
+	<!--							width="400px"-->
+	<!--							>-->
+	<!--								<items>-->
+	<!--									<ObjectListItem>-->
+											
+	<!--									</ObjectListItem>-->
+	<!--								</items>-->
+	<!--							</List>-->
+	<!--							<html:object id="CC3D" classid="CLSID:4B6E3013-6E45-11D0-9309-0020AFE05CC8" codebase="blaxxunCC3D.ocx" height="600px" width="800px">-->
+	<!--								<html:param name="_Version" value="65536"></html:param>-->
+	<!--								<html:param name="_StockProps" value="0"></html:param>-->
+	<!--								<html:param name="SRC" value="./src/MountWalk.wrl"></html:param>-->
+	<!--								<html:embed src="./src/MountWalk.wrl" name="CC3D" border="0" height="600px" width="800px"></html:embed>	-->
+	<!--							</html:object>-->
+	<!--							<Button text="Next VP" press="handleNextVPButton"></Button>-->
+	<!--							<Button text="Prev VP" press="handlePrevVPButton"></Button>-->
+	<!--							<Button text="Animate" press="handleAnimateVP"></Button>-->
+	<!--							<Button text="Stop Animate" press="stopAnimateVP"></Button>-->
+	<!--						</l:mainContent>-->
+	<!--						<l:sideContent>-->
+								<!--<html:object id="CC3D" classid="CLSID:4B6E3013-6E45-11D0-9309-0020AFE05CC8" codebase="blaxxunCC3D.ocx" height="600px" width="800px">-->
+								<!--	<html:param name="_Version" value="65536"></html:param>-->
+								<!--	<html:param name="_StockProps" value="0"></html:param>-->
+								<!--	<html:param name="SRC" value="./src/MountWalk.wrl"></html:param>-->
+								<!--	<html:embed src="./src/MountWalk.wrl" name="CC3D" border="0" height="600px" width="800px"></html:embed>	-->
+								<!--</html:object>-->
+								
+								<!--<html:input language="JavaScript" value="Next VP" onclick="document.CC3D.OnNextViewpoint()" name="ButtonRed" type="BUTTON"></html:input>-->
+								<!--<Button text="Next VP" press="handleNextVPButton"></Button>-->
+								<!--<Button text="Prev VP" press="handlePrevVPButton"></Button>-->
+								<!--<Button text="Animate" press="handleAnimateVP"></Button>-->
+								<!--<Button text="Stop Animate" press="stopAnimateVP"></Button>-->
+
+	<!--						</l:sideContent>-->
+	<!--						</l:DynamicSideContent>-->
+	<!--					</Page>-->
+	<!--			</content>-->
+	<!--		</Page>-->
+	<!--	</pages>-->
+	<!--</App>-->
 </mvc:View>

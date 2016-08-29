@@ -1,0 +1,43 @@
+<mvc:View
+		controllerName="bsContact.controller.Master"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:core="sap.ui.core"
+		xmlns="sap.m"
+		xmlns:semantic="sap.m.semantic">
+
+	<semantic:MasterPage
+			id="page"
+			title="{masterView>/title}"
+			navButtonPress="onNavBack"
+			showNavButton="true">
+		<semantic:content>
+			<List
+					id="list"
+					items="{
+						path: '/PurchaseOrderItems',
+						sorter: {
+							path: 'DeliveryDate',
+							descending: false
+							},
+						groupHeaderFactory: '.createGroupHeader'
+					}"
+					busyIndicatorDelay="{masterView>/delay}"
+					noDataText="{masterView>/noDataText}"
+					mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}"
+					growing="true"
+					growingScrollToLoad="true"
+					updateFinished="onUpdateFinished"
+					selectionChange="onSelectionChange">
+				<items>
+					<ObjectListItem
+							type="{= ${device>/system/phone} ? 'Active' : 'Inactive'}"
+							press="onSelectionChange"
+							title="{DeliveryDate}">
+					</ObjectListItem>
+				</items>
+			</List>
+		</semantic:content>
+
+	</semantic:MasterPage>
+
+</mvc:View>

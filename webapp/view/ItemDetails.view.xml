@@ -1,0 +1,78 @@
+<mvc:View
+	controllerName="bsContact.controller.ItemDetails"
+	xmlns:semantic="sap.m.semantic" 
+	xmlns:core="sap.ui.core"  
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 	
+	xmlns="sap.m" 
+	xmlns:form="sap.ui.layout.form">
+	<Page
+		id="itempage"  
+		navButtonPress="onNavBack"  
+		showHeader="false"
+		showNavButton="{device>/system/phone}">  
+			<content>  
+				<HBox
+					height="600px">
+					<!--<html:img src="./img/torus.jpg" id="testImg" height="400px"></html:img>-->
+					<html:object id="CC3D" classid="CLSID:4B6E3013-6E45-11D0-9309-0020AFE05CC8" codebase="blaxxunCC3D.ocx" height="600px" width="800px">
+					<html:param name="_Version" value="65536"></html:param>
+					<html:param name="_StockProps" value="0"></html:param>
+					<html:param name="SRC" value="./src/Experiment5.wrl" id="embedParam"></html:param>
+					<html:embed src="./src/Experiment5.wrl" name="CC3D" border="0" height="600px" width="800px" id="embedView"></html:embed>	
+					</html:object>
+<!--<OBJECT  CLASSID="CLSID:4B6E3013-6E45-11D0-9309-0020AFE05CC8" id="CC3D" WIDTH=100% HEIGHT=100%>-->
+<!--<param name="src" value="shapemod-accelerate.wrl">-->
+<!--  <param name="_Version" value="393223">-->
+<!--  <param name="_ExtentX" value="25030">-->
+<!--  <param name="_ExtentY" value="15531">-->
+<!--  <param name="_StockProps" value="65">-->
+<!--  <param name="BackColor" value="15662847">-->
+<!--  <param name="Enabled" value="-1">-->
+<!--  <param name="VRML-DASHBOARD" value="0">-->
+<!--  <param name="FULLSCREEN" value="0">-->
+<!--  <param name="FULLSCREEN-MODE" value>-->
+<!--  <param name="TIMER-INTERVAL" value="0">-->
+<!--  <param name="AVATAR-URL" value="C:\PROGRA~1\BITMAN~1\BSCONT~1\avatar.wrl">-->
+<!--  <param name="AVATAR-DISPLAY" value="0">-->
+<!--  <param name="TARGET" value>-->
+<!--  <param name="FORCE-HW" value="1">-->
+<!--  <param name="FORCE-RGB" value="-1">-->
+<!--  <param name="HW-PROBLEM-CHECK" value="-1">-->
+<!--  <param name="HIDE-CURSOR" value="0">-->
+<!--  <param name="FAST-MODE" value="0">-->
+<!--  <param name="BACKGROUND-COLOR" value>-->
+<!--  <param name="BACKGROUND-IMAGE" value>-->
+<!--  <param name="SPLASH-SCREEN" value>-->
+<!--  <param name="STARTUP-SCREEN" value="-1">-->
+<!--  <param name="UI-URL" value>-->
+<!--  <param name="PRELOAD" value="0">-->
+<!--  <param name="TRANSPARENT" value="0">-->
+<!--  <param name="WINDOWLESS" value="0">-->
+<!--  <param name="DRAG-DROP" value="-1">-->
+<!--  <param name="RELATIVE-TIME" value="0">-->
+<!--  <param name="EDIT-MODE" value="0">-->
+<!--  <param name="BXX-URL" value>-->
+<!--  <param name="LICENCE" value>-->
+<!--  <param name="OEM" value>-->
+<!--  <param name="RENDERER" value>-->
+<!--  <param name="FULLSCREEN-MONITOR" value>-->
+<!--  <param name="COLLISION-DETECTION" value="1">-->
+<!--  <param name="GRAVITY" value="1">-->
+<!--  <param name="PROGRESS-BAR" value="1">-->
+<!--  <param name="FULLSPEED" value="0">-->
+<!--  <param name="ARGUMENT" value>-->
+<!--  <param name="MULTISAMPLE-TYPE" value="-1">-->
+<!--  <param name="MULTISAMPLE-QUALITY" value="-1">-->
+<!--<EMBED name=Contact3D SRC="shapemod-accelerate.wrl" TYPE="application/x-cc3d"-->
+<!--WIDTH=100% HEIGHT=100%></OBJECT>					-->
+				</HBox>
+				<HBox>
+					<Button text="Next VP" press="handleNextVPButton"></Button>
+					<Button text="Prev VP" press="handlePrevVPButton"></Button>
+					<Button text="Animate" press="handleAnimateVP"></Button>
+					<Button text="Stop Animate" press="stopAnimateVP"></Button>
+				</HBox>					
+			</content>
+	</Page>  
+</mvc:View>

@@ -1,0 +1,19 @@
+<mvc:View 
+	controllerName="bsContact.controller.MountainView" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:l="sap.ui.layout"
+	xmlns:semantic="sap.m.semantic"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">										
+		<html:object id="CC3D" classid="CLSID:4B6E3013-6E45-11D0-9309-0020AFE05CC8" codebase="blaxxunCC3D.ocx" height="600px" width="800px">
+		<html:param name="_Version" value="65536"></html:param>
+		<html:param name="_StockProps" value="0"></html:param>
+		<html:param name="SRC" value="./src/Experiment5.wrl"></html:param>
+		<html:embed src="./src/Experiment5.wrl" name="CC3D" border="0" height="600px" width="800px"></html:embed>	
+		</html:object>
+		<Button text="Next VP" press="handleNextVPButton"></Button>
+		<Button text="Prev VP" press="handlePrevVPButton"></Button>
+		<Button text="Animate" press="handleAnimateVP"></Button>
+		<Button text="Stop Animate" press="stopAnimateVP"></Button>
+</mvc:View>

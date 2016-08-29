@@ -17,7 +17,6 @@
 			"version": "1.32.0"
 		}
 	},
-
 	"sap.ui": {
 		"_version": "1.1.0",
 		"technology": "UI5",
@@ -34,12 +33,8 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_bluecrystal"
-		]
+		"supportedThemes": ["sap_hcb", "sap_bluecrystal"]
 	},
-
 	"sap.ui5": {
 		"_version": "1.1.0",
 		"rootView": {
@@ -70,6 +65,27 @@
 			"css": [{
 				"uri": "css/style.css"
 			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "bsContact.view",
+				"controlId": "idBSAppControl",
+				"controlAggregation": "detailPages"
+			},
+			"routes": [
+				{
+				"pattern": "itemDetails/{title}",
+				"name" : "itemDetails",
+				"target" : "itemDetails"
+			}],
+			"targets": {
+				"itemDetails": {
+					"viewName": "ItemDetails",
+					"viewId": "itemDetails"
+				}
+			}
 		}
 	}
 }
